@@ -178,6 +178,10 @@ body {
 #experience li {
     transition: all 300ms ease-in-out;
 }
+.experience-link {
+    text-decoration: none;
+    color: rgba(200, 200, 200, 0.9);
+}
 
 #experience ol:hover li {
     opacity: 0.5;
