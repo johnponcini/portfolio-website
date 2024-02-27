@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="John Poncini is a software engineer who builds accessible, inclusive products and digital experiences for the web.">
+        <meta name="image" content="">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="John">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="John Poncini">
+        <meta property="og:description" content="John Poncini is a software engineer who builds accessible, inclusive products and digital experiences for the web.">
+        <meta property="og:url" content="https://johnponcini.com/">
+        <meta property="og:image" content="">
+        <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='icon_512x512.png')}}">
+        <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='icon_192x192.png')}}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icon_120x120.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='icon_32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='icon_16x16.png')}}">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="">
+        <meta name="theme-color" content="">
+        <meta name="google-site-verification" content="">
+        <meta name="next-head-count" content="29">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />        <link rel="preload" href="" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust">
+        <link rel="preload" href="" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='wickedcss.min.css') }}">
+        <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        
+        {% block header %}{% endblock %}
+    </head>
+    <body>
+        <div class="grain"></div>
+        <div id="light-dark-toggle">
+            <div class="vertical"><p>dark</p></div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <div class="vertical"><p>light</p></div>
+        </div>
+        <div class="blob-container">
+            <div class="blob-1 blob"></div>
+            <div class="blob-2 blob"></div>
+            <div class="blob-3 blob"></div>
+            <div class="blob-4 blob"></div>
+            <div class="blob-5 blob"></div>
+            <div class="blob-6 blob"></div>
+            <div class="blob-7 blob"></div>
+        </div>
+        <div id="content">{% block content %}{% endblock %}</div>
+
+
+        <!-- BUTTON NAVIGATION
+
+        <input type="radio" name="content-state" id="home" checked/>
+        <input type="radio" name="content-state" id="info" />
+        <input type="radio" name="content-state" id="projects" />
+        <input type="radio" name="content-state" id="portfolio" />
+        <input type="radio" name="content-state" id="contact" />
+        
+        <div id="navigation">
+            <label class="nav-button home" for="home">Home</label>
+            <label class="nav-button info" for="info">Info</label>
+            <label class="nav-button projects" for="projects">Projects</label>
+            <label class="nav-button porfolio" for="portfolio">Portfolio</label>
+            <label class="nav-button contact" for="contact">Contact</label>
+        </div>
+
+        <ul class="content-items">
+            <li class="home fadeIn">
+                {% include 'home.html' %}
+            </li>
+            <li class="info fadeIn">
+                {% include 'info.html' %}
+            </li>
+            <li class="projects fadeIn">
+                {% include 'projects.html' %}
+            </li>
+            <li class="portfolio fadeIn">
+                {% include 'portfolio.html' %}
+            </li>
+            <li class="contact fadeIn">
+                {% include 'contact.html' %}
+            </li>
+        </ul>
+        END NAVIGATION -->
+    </body>
+</html>

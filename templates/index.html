@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% block title %}John Poncini{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+    <div id="page-header">
+        <h1>John Poncini</h1>
+        <h4>Builder, Technologist, and Visionary</h4>
+        <p>I build elegant, effective, and engaging digital products using cutting-edge technology for a better tomorrow.</p>
+        <br>
+        <script>
+            function toggleNavigationLink(element) {
+                var active_element = document.getElementsByClassName("nav-btn active")[0];
+                active_element.classList.remove("active");
+                element.classList.add("active");
+            };
+        </script>
+
+        <ul class="navigation-links">
+            <li>
+                <a id="about-nav" href="#about" class="nav-btn active" onclick="toggleNavigationLink(this)">
+                    <span class="nav-indicator"></span>
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a id="exp-nav" href="#experience" class="nav-btn" onclick="toggleNavigationLink(this)">
+                    <span class="nav-indicator"></span>
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li style="display: none">
+                <a id="projects-nav" href="#projects" class="nav-btn" onclick="toggleNavigationLink(this)">
+                    <span class="nav-indicator"></span>
+                    <span>Projects</span>
+                </a>
+            </li>
+        </ul>
+        <div class="social-links">
+            <a href="https://github.com/johnponcini">
+                <i class="fa-brands fa-github fa-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/john-poncini-91613894/">
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+            </a>
+            <a href="https://twitter.com/JohnPoncini">
+                <i class="fa-brands fa-x-twitter fa-xl"></i>
+            </a>
+            <a href="https://medium.com/@jponcini95">
+                <i class="fa-brands fa-medium fa-xl"></i>
+            </a>
+        </div>
+    </div>
+    <div id="content-container">
+        <div id="content-box">
+            <section id="about">
+                <br>
+                <br>
+                <br>
+                <p>
+                I was introduced to coding at a young age by my grandpa who had been an engineer at Hewlett Packard. 
+                To him, electronics and computing were more than just a hobby or career, they were a 
+                <a class="ext-link" href="https://medium.com/better-advice/how-programming-works-as-a-way-of-life-1a9fc2baabca">way of life</a>. 
+                The seemingness endless cups of coffee and lines of C++ on one of the many desktop computers are testimony to this. 
+                And it wasn't long before I began coding myself. 
+                Since then, I've had the opportunity to build software tools for a 
+                <a class="ext-link" href="https://igem.org">synthetic biology competition</a>, a 
+                <a class="ext-link" href="https://lykospbc.com">pharmaceutical start-up</a>, and a 
+                <a class="ext-link" href="https://maps.org">non-profit organization</a>.
+                </p>
+                <p>
+                Recently, I've been fortunate enough to take some time away from my work to spend with my new family.
+                These days I'm mostly taking care of my newborn twins.
+                And I can honestly say that my two baby girls are everything to me. 
+                </p>
+                <p>
+                Now, my interests have circled back to biology. I studied bioengineering at the 
+                <a class="ext-link" href="https://ucsc.edu">University of California, Santa Cruz</a>, 
+                and had dreams of starting my own biotech company. And that dream is still very much alive today.
+                </p>
+                <p>
+            </section>
+            <section id="experience">
+            <div class="experience_section"></div>
+                <br>
+                <br>
+                <br>
+                <ol>
+                    <li>
+                        <div class="experience-block">
+                            <div class="timeframe">
+                                2021 - 2024
+                            </div>
+                            <div class="description">
+                                <h4>
+                                    <div class="active">
+                                        Associate Director of Technology  ·  MAPS
+                                        <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
+                                    </div>
+                                    <div>
+                                        Product Manager
+                                    </div>
+                                    <div>
+                                        Senior Software Engineer
+                                    </div>
+                                </h4>
+                                <p>Built, styled, and shipped high-quality websites, applications, and cross-platform digital experiences for the non-profit organization and its partners. Led the development and architecture of technical tools such as content management systems, REST APIs, constituent relationship management systems, payment processing systems, and continuous integration pipelines to meet business needs. Provided leadership within the organization through close collaboration, mentorship, and spearheading the development of internal tools to improve workflows.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="experience-block">
+                            <div class="timeframe">
+                                2016 - 2021
+                            </div>
+                            <div class="description">
+                                <h4>
+                                    <div class="active">
+                                        Video and Informatics Systems Engineer  ·  Lykos Therapeutics 
+                                        <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
+                                    </div>
+                                    <div>
+                                        Clinical Intern
+                                    </div>
+                                </h4>
+                                <p>
+                                    Developed recording software, a media encoding pipeline, a content delivery network, and a secure media storage platform for sensitive clinical trial data in a start-up environment. Designed, built, and shipped digital recording devices to various academic institutions including New York University, University of California, San Francisco, University of Wisconsin, Madison, The University of British Columbia, and Maastricht University. 
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <a class="ext-link" href="{{ url_for('static', filename='Poncini_Resume_20240208.pdf') }}">
+                    View Full Résumé
+                    <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
+                </a>
+            </section>
+            <br>
+            <section id="projects">
+                <br>
+                <br>
+                <br>
+            </section>
+
+        </div>
+    </div>
+    <script>
+        const about = document.getElementById("about-nav");
+        const exp = document.getElementById("exp-nav");
+
+        $('#content-container').on('scroll', function() {
+            var scrollTop = $(this).scrollTop();
+            if (scrollTop + $(this).innerHeight() + 100 >= this.scrollHeight) {
+                toggleNavigationLink(exp);
+            } else if (scrollTop - 100 <= 0) {
+                toggleNavigationLink(about);
+            }
+        });
+    </script>
+{% endblock %}
