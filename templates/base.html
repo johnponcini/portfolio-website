@@ -33,6 +33,20 @@
         {% block header %}{% endblock %}
     </head>
     <body>
+        <div id="loader-wrapper">
+            <div id="loader"><h1>John Poncini<div class="subheading"> Portfolio</div></h1></div>
+        </div>
+        <script>
+        $(document).ready(function() {
+            setTimeout(function(){
+                $('#loader').addClass('loader');
+            }, 2000);
+            setTimeout(function(){
+                $('body').addClass('loaded');
+            }, 4000);
+         
+        });
+        </script>
         <div class="grain"></div>
         <div id="light-dark-toggle">
             <div class="vertical"><p>dark</p></div>
