@@ -2,7 +2,7 @@
 {% block title %}John Poncini{% endblock %}
 {% block header %}{% endblock %}
 {% block content %}
-    <div id="page-header">
+    <div class="page-header desktop">
         <h1>John Poncini</h1>
         <h4>Builder, Technologist, and Visionary</h4>
         <p>I build elegant, effective, and engaging digital products using cutting-edge technology for a better tomorrow.</p>
@@ -35,7 +35,7 @@
                 </a>
             </li>
         </ul>
-        <div class="social-links">
+        <div class="social-links desktop">
             <a href="https://github.com/johnponcini">
                 <i class="fa-brands fa-github fa-xl"></i>
             </a>
@@ -52,10 +52,16 @@
     </div>
     <div id="content-container">
         <div id="content-box">
+            <div class="page-header mobile">
+                <h1>John Poncini</h1>
+                <h4>Builder, Technologist, and Visionary</h4>
+                <br>
+            </div>
             <section id="about">
                 <br>
                 <br>
                 <br>
+                <h3 class="section-header mobile">About</h3>
                 <p>
                 I was introduced to coding at a young age by my grandpa who had been an engineer at Hewlett Packard. 
                 To him, electronics and computing were more than just a hobby or career, they were a 
@@ -84,6 +90,7 @@
                 <br>
                 <br>
                 <br>
+                <h3 class="section-header mobile">Experience</h3>
                 <ol>
                     <a class="experience-link" href="https://maps.org">
                         <li>
@@ -144,8 +151,27 @@
                 <br>
                 <br>
             </section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="social-links mobile">
+                <a href="https://github.com/johnponcini">
+                    <i class="fa-brands fa-github fa-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/john-poncini-91613894/">
+                    <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+                <a href="https://twitter.com/JohnPoncini">
+                    <i class="fa-brands fa-x-twitter fa-xl"></i>
+                </a>
+                <a href="https://medium.com/@jponcini95">
+                    <i class="fa-brands fa-medium fa-xl"></i>
+                </a>
+            </div>
 
         </div>
+
     </div>
     <script>
         const about = document.getElementById("about-nav");
